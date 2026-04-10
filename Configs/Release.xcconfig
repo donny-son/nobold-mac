@@ -1,0 +1,4 @@
+#include "Base.xcconfig"
+#include? "LocalSigning.xcconfig"
+
+CODE_SIGN_STYLE = Automatic

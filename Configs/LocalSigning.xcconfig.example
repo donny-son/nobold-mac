@@ -1,0 +1,5 @@
+// Copy this file to LocalSigning.xcconfig and set your signing values when you
+// want Xcode release builds or archives signed with a real team identity.
+//
+// DEVELOPMENT_TEAM = YOURTEAMID
+// CODE_SIGN_IDENTITY = Apple Development

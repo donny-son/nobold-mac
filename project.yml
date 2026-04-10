@@ -1,0 +1,45 @@
+name: NoBold
+
+options:
+  createIntermediateGroups: true
+  minimumXcodeGenVersion: 2.38.0
+
+settings:
+  base:
+    PRODUCT_NAME: NoBold
+    PRODUCT_BUNDLE_IDENTIFIER: com.nobold.app
+    CURRENT_PROJECT_VERSION: 1
+    MARKETING_VERSION: 1.0
+    INFOPLIST_FILE: NoBold/Info.plist
+    GENERATE_INFOPLIST_FILE: NO
+    MACOSX_DEPLOYMENT_TARGET: "13.0"
+    SWIFT_VERSION: 6.0
+    ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+    ENABLE_HARDENED_RUNTIME: YES
+
+targets:
+  NoBold:
+    type: application
+    platform: macOS
+    configFiles:
+      Debug: Configs/Debug.xcconfig
+      Release: Configs/Release.xcconfig
+    sources:
+      - path: NoBold
+        excludes:
+          - Info.plist
+    settings:
+      base:
+        PRODUCT_MODULE_NAME: NoBold
+        CODE_SIGN_ENTITLEMENTS: ""
+
+schemes:
+  NoBold:
+    build:
+      targets:
+        NoBold: all
+    run:
+      config: Debug
+    archive:
+      config: Release
