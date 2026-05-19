@@ -1,8 +1,8 @@
 # NoBold
 
-<img width="320" height="425" alt="image" src="https://github.com/user-attachments/assets/7d190cd9-22aa-411f-8318-88a98d6ae450" />
+<img width="823" height="463" alt="SCR-20260520-ensr-2" src="https://github.com/user-attachments/assets/8886a021-dbff-496e-b9b0-b05648600842" />
 
-A tiny macOS menu bar app that strips **bold** formatting from whatever you copy.
+A tiny macOS menu bar app that strips bold formatting from whatever you copy.
 
 AI chat tools (Claude, ChatGPT, Gemini) love to copy text with bold styling
 baked in — HTML `<strong>`/`<b>`, RTF bold font traits, markdown `**`/`__`.
@@ -12,18 +12,18 @@ the text you wanted.
 
 ## Features
 
-- **Menu bar only** — no Dock icon, no window clutter (`LSUIElement` agent app).
-- **Automatic cleanup** — polls `NSPasteboard` and rewrites copied text in place.
-- **Three formats, independently toggleable:**
-  - **Rich text (RTF)** — removes the `.bold` symbolic trait from font descriptors.
-  - **HTML** — strips `<strong>`/`<b>` tags and `font-weight` inline styles.
-  - **Markdown** — removes `**text**` and `__text__` emphasis markers.
-- **Non-destructive** — only changed representations are rewritten; unrelated
+- Menu bar only — no Dock icon, no window clutter (`LSUIElement` agent app).
+- Automatic cleanup — polls `NSPasteboard` and rewrites copied text in place.
+- Three formats, independently toggleable:
+  - Rich text (RTF) — removes the `.bold` symbolic trait from font descriptors.
+  - HTML — strips `<strong>`/`<b>` tags and `font-weight` inline styles.
+  - Markdown — removes `text` and `text` emphasis markers.
+- Non-destructive — only changed representations are rewritten; unrelated
   pasteboard types and items are preserved.
-- **Configurable polling interval** — 0.25s / 0.5s / 1.0s / 1.5s.
-- **Manual mode** — "Clean Now" cleans the current clipboard on demand.
-- **Keyboard shortcuts** — `⌘⇧P` toggle automatic cleanup, `⌘⇧K` clean now.
-- **Activity tracking** — total cleanups and last action shown in the dashboard.
+- Configurable polling interval — 0.25s / 0.5s / 1.0s / 1.5s.
+- Manual mode — "Clean Now" cleans the current clipboard on demand.
+- Keyboard shortcuts — `⌘⇧P` toggle automatic cleanup, `⌘⇧K` clean now.
+- Activity tracking — total cleanups and last action shown in the dashboard.
 
 ## Requirements
 
@@ -40,7 +40,7 @@ Download the latest `NoBold.app` from the
 and drag it into `/Applications`.
 
 > The app is distributed unsigned. On first launch macOS Gatekeeper may block
-> it. Right-click the app → **Open**, then confirm. (Or run
+> it. Right-click the app → Open, then confirm. (Or run
 > `xattr -dr com.apple.quarantine /Applications/NoBold.app`.)
 
 ### From source
@@ -64,11 +64,11 @@ open NoBold.xcodeproj
 
 ## Usage
 
-1. Launch NoBold. A **bold "B"** icon appears in the menu bar with a status dot
+1. Launch NoBold. A bold "B" icon appears in the menu bar with a status dot
    (green = active, amber = no format enabled, grey = paused).
 2. Click the icon to open the dashboard: toggle automatic cleanup, run
    "Clean Now", and choose which formats to strip.
-3. Open **Settings…** for the polling interval and an activity summary.
+3. Open Settings… for the polling interval and an activity summary.
 4. Copy bold text from anywhere — paste it, and the bold is gone.
 
 ## How it works
